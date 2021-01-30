@@ -21,31 +21,7 @@ function clickButton(buttonValue) {
   previousValue = input.value;
 }
 
-// press7.addEventListener("click", function () {
-//   const press7 = document.getElementById("press7").innerText;
-//   number7 = parseInt(press7);
-//   document.getElementById("inputNumber").value = number7;
-// });
-// press8.addEventListener("click", function () {
-//   clickButton();
-// });
-// function clickButton() {
-//   const press8 = document.getElementById("press8").innerText;
-//   number8 = parseInt(press8);
-//   document.getElementById("inputNumber").value = number8;
-// }
-
-// press7.addEventListener("click", function () {
-//   const press7 = document.getElementById("press7").innerText;
-//   number7 = parseInt(press7);
-//   document.getElementById("inputNumber").value = number7;
-// });
-// press8.addEventListener("click", function () {
-//   const press8 = document.getElementById("press8").innerText;
-//   number8 = parseInt(press8);
-//   document.getElementById("inputNumber").value = number8;
-// });
-
+// cancel button
 const cancelAll = document.getElementById("cancelAll");
 cancelAll.addEventListener("click", function () {
   input.value = " ";
@@ -54,12 +30,13 @@ cancelAll.addEventListener("click", function () {
 // submitButton
 let submitButton = document.getElementById("submitButton");
 submitButton.addEventListener("click", function () {
-  const inputValue = document.getElementById("inputNumber");
+  const inputValue = document.getElementById("inputNumber").value;
+  pressedValue = parseInt(inputValue);
   //   const pinCode = pinInput.value;
 
-  if (pinInput.value == inputValue.value) {
-    alert((document.querySelector("#okNotify").innerText = success));
+  if (document.getElementById("pinInput").value == pressedValue) {
+    alert(document.getElementById("okNotify").innerText);
   } else {
-    document.getElementById("#notOkNotify").innerText = Fail;
+    alert(document.getElementById("notOkNotify").innerText);
   }
 });
